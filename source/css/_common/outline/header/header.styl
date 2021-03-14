@@ -18,9 +18,14 @@
 }
 
 .site-brand-container {
-  display: flex;
+  display: none;
+//  display: flex;
   flex-shrink: 0;
   padding: 0 10px;
+
+  +tablet-mobile() {
+    display: flex;
+  }
 }
 
 @import 'headerband';

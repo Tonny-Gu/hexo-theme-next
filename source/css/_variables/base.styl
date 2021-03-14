@@ -13,7 +13,7 @@ $grey-light   = #ccc;
 $grey         = #bbb;
 $grey-dark    = #999;
 $grey-dim     = #666;
-$black-light  = #555;
+$black-light  = #333;
 $black-dim    = #333;
 $black-deep   = #222;
 $red          = #ff2a2a;
@@ -21,6 +21,7 @@ $blue-bright  = #87daff;
 $blue         = #0684bd;
 $blue-deep    = #262a30;
 $orange       = #fc6423;
+$mycolor      = #16a085;
 
 
 // Scaffolding
@@ -46,7 +47,7 @@ $border-color                 = $grey-light;
 // Background color for <body>
 $body-bg-color                = white;
 $body-bg-color-dark           = #282828;
-$content-bg-color             = white;
+$content-bg-color             = #f9f9f9;
 $content-bg-color-dark        = $black-dim;
 
 // Selection
@@ -69,10 +70,11 @@ get_font_family(config) {
 }
 
 // Font families.
-$font-family-chinese      = "PingFang SC", "Microsoft YaHei";
+$font-family-sans         = Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$font-family-serif        = Georgia, 'Times New Roman', 'Noto Serif SC', 'STSong', serif;
 
-$font-family-base         = $font-family-chinese, sans-serif;
-$font-family-base         = get_font_family('global'), $font-family-chinese, sans-serif if get_font_family('global');
+$font-family-base         = $font-family-sans;
+$font-family-base         = get_font_family('global'), $font-family-sans if get_font_family('global');
 
 $font-family-logo         = $font-family-base;
 $font-family-logo         = get_font_family('title'), $font-family-base if get_font_family('title');
@@ -80,11 +82,11 @@ $font-family-logo         = get_font_family('title'), $font-family-base if get_f
 $font-family-headings     = $font-family-base;
 $font-family-headings     = get_font_family('headings'), $font-family-base if get_font_family('headings');
 
-$font-family-posts        = $font-family-base;
-$font-family-posts        = get_font_family('posts'), $font-family-base if get_font_family('posts');
+$font-family-posts        = $font-family-serif, $font-family-base;
+// $font-family-posts        = get_font_family('posts'), $font-family-base if get_font_family('posts');
 
-$font-family-monospace    = consolas, Menlo, monospace, $font-family-chinese;
-$font-family-monospace    = get_font_family('codes'), consolas, Menlo, monospace, $font-family-chinese if get_font_family('codes');
+$font-family-monospace    = consolas, Menlo, monospace, $font-family-sans;
+$font-family-monospace    = get_font_family('codes'), consolas, Menlo, monospace, $font-family-sans if get_font_family('codes');
 
 
 // Font size
@@ -100,7 +102,7 @@ $font-size-largest        = 1.5em;
 
 // Headings font size
 $font-size-headings-step  = .125em;
-$font-size-headings-base  = (hexo-config('font.enable') and hexo-config('font.headings.size') is a 'unit') ? unit(hexo-config('font.headings.size'), em) : 1.625em;
+$font-size-headings-base  = (hexo-config('font.enable') and hexo-config('font.headings.size') is a 'unit') ? unit(hexo-config('font.headings.size'), em) : 1.5em;
 
 
 // Global line height
@@ -176,15 +178,15 @@ $content-desktop                = 700px;
 $content-desktop-large          = 800px;
 $content-desktop-largest        = 900px;
 
-$content-desktop-padding        = 40px;
-$content-tablet-padding         = 10px;
-$content-mobile-padding         = 8px;
+$content-desktop-padding        = 60px;
+$content-tablet-padding         = 15px;
+$content-mobile-padding         = 12px;
 
 
 // Headband
 // --------------------------------------------------
 $headband-height                = 3px;
-$headband-bg                    = $black-deep;
+$headband-bg                    = $mycolor;
 
 
 // Section Header

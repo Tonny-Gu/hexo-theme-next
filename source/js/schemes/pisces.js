@@ -72,10 +72,10 @@ NexT.utils.getAffixParam = function() {
   let headerOffset = document.querySelector('.header-inner').offsetHeight;
   let footerOffset = document.querySelector('.footer').offsetHeight;
 
-  document.querySelector('.sidebar').style.marginTop = headerOffset + sidebarOffset + 'px';
+  document.querySelector('.sidebar').style.marginTop = headerOffset + sidebarOffset * 2 + 'px';
 
   return {
-    top   : headerOffset,
+    top   : headerOffset + sidebarOffset,
     bottom: footerOffset
   };
 };

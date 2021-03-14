@@ -9,9 +9,12 @@ $sidebar-width                = hexo-config('sidebar.width') is a 'unit' ? hexo-
 $sidebar-desktop              = unit($sidebar-width, 'px');
 $content-wrap                 = 'calc(100% - %s)' % unit($sidebar-width + $sidebar-offset, 'px');
 
+// $content-desktop              = 'calc(100% - %s)' % unit($content-desktop-padding / 2, 'px');
+// $content-desktop-large        = 1160px;
+// $content-desktop-largest      = 73%;
 $content-desktop              = 'calc(100% - %s)' % unit($content-desktop-padding / 2, 'px');
-$content-desktop-large        = 1160px;
-$content-desktop-largest      = 73%;
+$content-desktop-large        = 70rem;
+$content-desktop-largest      = 70rem;
 
 
 // Borders
@@ -30,8 +33,8 @@ $subtitle-color                   = $grey-lighter;
 // Sidebar
 // --------------------------------------------------
 $sidebar-nav-color                = var(--text-color);
-$sidebar-nav-hover-color          = $orange;
-$sidebar-highlight                = $orange;
+$sidebar-nav-hover-color          = $mycolor;
+$sidebar-highlight                = $mycolor;
 
 $site-author-image-width          = 120px;
 $site-author-image-border-width   = 1px;

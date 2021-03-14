@@ -16,7 +16,7 @@
 
     {%- if post.header !== false %}
       <header class="post-header">
-        <{%- if is_index %}h2{% else %}h1{%- endif %} class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
+        <h1 class="post-title{%- if post.direction and post.direction.toLowerCase() === 'rtl' %} rtl{%- endif %}" itemprop="name headline">
           {# Link posts #}
           {%- if post.link %}
             {%- if post.sticky > 0 %}
@@ -38,7 +38,7 @@
             {{- post.title }}
             {{- post_edit(post.source) }}
           {%- endif %}
-        </{%- if is_index %}h2{% else %}h1{%- endif %}>
+        </h1>
 
         <div class="post-meta">
 
